@@ -1,0 +1,19 @@
+header
+{
+    background-color: blue;
+}
+div
+{
+    display:flex;
+    justify-content: space-between;
+    p
+    {
+        font-size: 2rem;
+        a
+        {
+            text-decoration: none;
+            color:cyan;
+        }
+    }
+}
+

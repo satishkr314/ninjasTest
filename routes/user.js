@@ -1,0 +1,14 @@
+const express=require('express');
+const router=express.Router();
+const passport=require('passport');
+const userController=require('../controllers/user_controller');
+router.get('/profile',passport.checkAuthentication,userController.profile);
+router.get('/sign-in',userController.signIn);
+router.get('/sign-up',userController.signUp);
+router.get('/sign-out',userController.distroySession);
+router.post('/create',userController.create);
+router.post('/create_session',passport.authenticate('local',{failureRedirect:'/user/sign-in'},),userController.create_session);
+router.post('/reset_password',userController.resetPassword);
+router.get('/auth/google',passport.authenticate('google',{scope:['profile','email']}));
+router.get('/auth/google/callback',passport.authenticate('google',{failureRedirect:'/user/sign-in'}),userController.create_session);
+module.exports=router;

@@ -1,0 +1,19 @@
+form {
+  height: 500px;
+  width: 600px;
+  background-color: blueviolet;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%; }
+  form input {
+    margin: auto;
+    height: 10%;
+    width: 80%; }
+  form p {
+    margin: auto;
+    font-size: 3rem;
+    color: grey; }
+    form p a {
+      text-decoration: none;
+      font-size: 2rem; }

@@ -1,0 +1,25 @@
+<link rel ="stylesheet" type="text/css" href="/css/home.css">
+        <h1>
+            Testing.../<%=title%>
+        </h1>
+    <section id="feed_posts">
+        
+        <% if(locals.user){%>
+            
+        <h1>Authentication sucessfull=> Welcome to web</h1>
+        <form action="/user/reset_password" method="POST">
+            Reset Password
+        <input type="text" name="password" placeholder="Enter new Password">
+        <input type="submit" value="reset">
+        <input type="hidden" name="email" value="<%=locals.user.email%>">
+        </form>
+        <%}else{%>
+            <h4>
+                sign up/sign in to continue
+            </h4>
+        <%}%>
+
+
+       
+    </section>
+         

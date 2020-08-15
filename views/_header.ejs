@@ -1,0 +1,18 @@
+<header>
+    <div>
+    <h1>Authentication</h1>
+            <% if(locals.user){ %>
+                <p>
+                    <%= user.name %>
+                    <br>
+                   <%= user.email %>
+                    <a href="/user/sign-out">Sign out</a>
+                </p>
+            <%} else {%>
+                <p>
+                    <a href="/user/sign-in">Sign In</a><span>/</span>
+                    <a href="/user/sign-up">Sign Up</a>
+                </p>
+             <%}%>
+    </div>
+</header>

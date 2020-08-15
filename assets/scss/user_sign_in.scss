@@ -1,0 +1,24 @@
+form
+{
+    height:500px;
+    width:600px;
+    background-color: blueviolet;
+    margin:auto;
+    display:flex;
+    flex-direction: column;
+    margin-top: 5%;
+    input{
+        margin:auto;
+        height:10%;
+        width:80%;
+    }
+    p{
+        margin:auto;
+        font-size: 3rem;
+        color:grey;
+        a{
+            text-decoration: none;
+            font-size: 2rem;
+        }
+    }
+}
